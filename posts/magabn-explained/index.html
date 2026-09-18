@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="João Pedro Campos">
+<meta name="dcterms.date" content="2026-09-18">
+<meta name="description" content="How a grid of cooperating agents learns the structure of a Bayesian network.">
 
-<title>João Pedro Campos – João Pedro Campos - MSc</title>
+<title>My Paper Explained: MAGABN – João Pedro Campos - MSc</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,24 +32,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ed4541212716fa6c3907bdc509ae21b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ed4541212716fa6c3907bdc509ae21b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,67 +76,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -144,7 +88,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">João Pedro Campos - MSc</span>
     </a>
   </div>
@@ -155,19 +99,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -186,87 +130,97 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="profile.jpg" class="about-image
-  round " style="height: 20em; width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">João Pedro Campos</h1>
-<p class="subtitle lead">PhD Researcher · Machine Learning Engineer</p>
+<h1 class="title">My Paper Explained: MAGABN</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">My Paper Explained</div>
+    <div class="quarto-category">Bayesian networks</div>
+    <div class="quarto-category">Metaheuristics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How a grid of cooperating agents learns the structure of a Bayesian network.
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>João Pedro Campos </p>
+          </div>
   </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 18, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://github.com/jpafcampos" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="https://linkedin.com/in/YOUR-PROFILE" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=8YCgpS0AAAAJ" class="about-link" rel="" target="">
-    <i class="bi bi-mortarboard"></i>
-     <span class="about-link-text">Scholar</span>
-  </a>
-  <a href="mailto:jpafcampos@gmail.com" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>I’m a PhD researcher at UFMG, affiliated with the University of Bristol, working at the intersection of probabilistic graphical models, Bayesian network inference, and explainable AI. Strong background in systems engineering, machine learning, deep learning, and optimization, including non-linear and linear programming. On the applied side, I build end-to-end machine learning systems.</p>
-<p>My central research interest is making <strong>interpretable</strong> decisions with probabilistic models. .</p>
-<section id="highlights" class="level2">
-<h2 data-anchor-id="highlights">Highlights</h2>
-<ul>
-<li>📄 <strong>Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning</strong> — <em>Knowledge-Based Systems</em>, 2025. <a href="./research.html">Read</a></li>
-<li>🛠️ <strong>End-to-end MLOps pipeline (Olist)</strong> — a complete ML system in production. <a href="./projects.html">View project</a></li>
-</ul>
+
+
+<p><em>This is the first post in a series where I explain my own papers in plain language. First up: <a href="https://doi.org/10.1016/j.knosys.2025.113025">Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning</a>, published in Knowledge-Based Systems (2025).</em></p>
+<section id="the-problem-in-one-sentence" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-in-one-sentence">The problem in one sentence</h2>
+<p>A Bayesian network is a graph that captures how variables influence each other — great for reasoning under uncertainty, and readable by humans. The hard part is <strong>drawing that graph from data</strong>: given a table of observations, which arrows should connect which variables?</p>
 </section>
-<section id="news" class="level2">
-<h2 data-anchor-id="news">News</h2>
-<ul>
-<li><strong>Sep 2026</strong> — New version of the site is live.</li>
-<li><strong>2025</strong> — Two papers accepted at CBIC 2025.</li>
-<li><strong>Feb 2025</strong> — Paper published in <em>Knowledge-Based Systems</em>.</li>
-</ul>
+<section id="why-its-hard" class="level2">
+<h2 class="anchored" data-anchor-id="why-its-hard">Why it’s hard</h2>
+<p>It’s a <em>NP-hard</em> problem. The number of possible graphs explodes as you add variables — far too many to check one by one. So we don’t search for the perfect graph directly. Instead we do <strong>search and score</strong>: define a score that says “how well does this graph explain the data?” (I use the BIC score), and then go hunting for a graph with a good score. The whole game becomes a smart search through an astronomically large space.</p>
 </section>
-<section id="recent-posts" class="level2">
-<h2 data-anchor-id="recent-posts">Recent posts</h2>
-<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TXklMjBQYXBlciUyMEV4cGxhaW5lZCUyQ0JheWVzaWFuJTIwbmV0d29ya3MlMkNNZXRhaGV1cmlzdGljcw==" data-listing-date-sort="1789700400000" data-listing-file-modified-sort="1789751256712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/magabn-explained/index.html" class="no-external">My Paper Explained: MAGABN</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/magabn-explained/index.html" class="no-external">
-<p>How a grid of cooperating agents learns the structure of a Bayesian network.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/magabn-explained/index.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
+<section id="the-idea-a-neighborhood-of-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="the-idea-a-neighborhood-of-solutions">The idea: a neighborhood of solutions</h2>
+<p>Genetic algorithms are a classic way to run that search: keep a population of candidate graphs, let the good ones “reproduce,” add a little random mutation, repeat. Over generations, quality improves.</p>
+<p>Our idea is to improve evolution with an idea borrowed from <strong>multi-agent</strong> systems. Instead of one big pool where the best solution can quickly take over, I place each candidate graph on a grid and let each one interact <strong>only with its immediate neighbors</strong>.</p>
+<p>That small constraint has a nice effect: a single strong solution can’t instantly dominate the whole population. Good ideas spread gradually, and diversity survives longer. In practice, that means the search is less likely to get stuck in a mediocre local optimum. I call the method <strong>MAGABN</strong>.</p>
+</section>
+<section id="how-it-actually-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-actually-works">How it actually works</h2>
+<p>Three ingredients:</p>
+<ul>
+<li><strong>Crossover</strong> — two neighboring graphs “mate.” Edges they agree on are passed to the child; edges they disagree on are inherited at random. The better child survives.</li>
+<li><strong>Mutation</strong> — pick two nodes at random and shake things up: add, remove, or flip the arrow between them. This injects the randomness that keeps the search alive.</li>
+<li><strong>Self-learning</strong> — every generation, the current best graph gets a focused local polish, a mini-search around it to squeeze out extra quality.</li>
+</ul>
+<p>One catch: Bayesian networks can’t contain cycles, and crossover or mutation can accidentally create one. So whenever that happens, a <strong>repair step</strong> breaks the cycle by removing or reversing an offending edge.</p>
+</section>
+<section id="did-it-work" class="level2">
+<h2 class="anchored" data-anchor-id="did-it-work">Did it work?</h2>
+<p>I tested MAGABN against three well-known methods — a classic genetic algorithm, a particle-swarm approach (BNCPSO), and hill-climbing with tabu search — on three standard benchmark networks (ASIA, CHILD, INSURANCE), across different amounts of data.</p>
+<p>The short version: <strong>MAGABN was both more accurate and more consistent.</strong> It had the best average structure-recovery score in 6 of 8 settings, and the most stable results (lowest variance) in 6 of 8. A statistical test (ANOVA + Tukey) confirmed the edge over the other methods was real, not luck. It held up especially well on the larger networks, which are exactly the cases where structure learning usually struggles.</p>
+</section>
+<section id="the-takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="the-takeaway">The takeaway</h2>
+<p>A metaheuristic originally built for continuous numerical optimization can be adapted into a reliable learner for a hard combinatorial problem.</p>
+<p>If you want the full details, tables, and proofs of significance, the paper is <a href="https://doi.org/10.1016/j.knosys.2025.113025">here</a>.</p>
 
 
 </section>
-</main></div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

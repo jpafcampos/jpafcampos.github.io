@@ -1,11 +1,15 @@
 [
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/posts/magabn-explained/index.html"
+    ]
   },
   {
     "listing": "/blog.html",
-    "items": []
+    "items": [
+      "/posts/magabn-explained/index.html"
+    ]
   },
   {
     "listing": "/projects.html",

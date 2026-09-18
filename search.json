@@ -25,7 +25,7 @@
     "href": "index.html#recent-posts",
     "title": "João Pedro Campos",
     "section": "Recent posts",
-    "text": "Recent posts\n\n\n\nNo matching items"
+    "text": "Recent posts\n\n\n\n\n\nMy Paper Explained: MAGABN\n\n\nHow a grid of cooperating agents learns the structure of a Bayesian network.\n\n\n\n\n\nSep 18, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -33,6 +33,55 @@
     "title": "João Campos",
     "section": "",
     "text": "Sou pesquisador de doutorado na UFMG, trabalhando com modelos probabilísticos e explicabilidade."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html",
+    "href": "posts/magabn-explained/index.html",
+    "title": "My Paper Explained: MAGABN",
+    "section": "",
+    "text": "This is the first post in a series where I explain my own papers in plain language. First up: Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning, published in Knowledge-Based Systems (2025)."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#the-problem-in-one-sentence",
+    "href": "posts/magabn-explained/index.html#the-problem-in-one-sentence",
+    "title": "My Paper Explained: MAGABN",
+    "section": "The problem in one sentence",
+    "text": "The problem in one sentence\nA Bayesian network is a graph that captures how variables influence each other — great for reasoning under uncertainty, and readable by humans. The hard part is drawing that graph from data: given a table of observations, which arrows should connect which variables?"
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#why-its-hard",
+    "href": "posts/magabn-explained/index.html#why-its-hard",
+    "title": "My Paper Explained: MAGABN",
+    "section": "Why it’s hard",
+    "text": "Why it’s hard\nIt’s a NP-hard problem. The number of possible graphs explodes as you add variables — far too many to check one by one. So we don’t search for the perfect graph directly. Instead we do search and score: define a score that says “how well does this graph explain the data?” (I use the BIC score), and then go hunting for a graph with a good score. The whole game becomes a smart search through an astronomically large space."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#the-idea-a-neighborhood-of-solutions",
+    "href": "posts/magabn-explained/index.html#the-idea-a-neighborhood-of-solutions",
+    "title": "My Paper Explained: MAGABN",
+    "section": "The idea: a neighborhood of solutions",
+    "text": "The idea: a neighborhood of solutions\nGenetic algorithms are a classic way to run that search: keep a population of candidate graphs, let the good ones “reproduce,” add a little random mutation, repeat. Over generations, quality improves.\nOur idea is to improve evolution with an idea borrowed from multi-agent systems. Instead of one big pool where the best solution can quickly take over, I place each candidate graph on a grid and let each one interact only with its immediate neighbors.\nThat small constraint has a nice effect: a single strong solution can’t instantly dominate the whole population. Good ideas spread gradually, and diversity survives longer. In practice, that means the search is less likely to get stuck in a mediocre local optimum. I call the method MAGABN."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#how-it-actually-works",
+    "href": "posts/magabn-explained/index.html#how-it-actually-works",
+    "title": "My Paper Explained: MAGABN",
+    "section": "How it actually works",
+    "text": "How it actually works\nThree ingredients:\n\nCrossover — two neighboring graphs “mate.” Edges they agree on are passed to the child; edges they disagree on are inherited at random. The better child survives.\nMutation — pick two nodes at random and shake things up: add, remove, or flip the arrow between them. This injects the randomness that keeps the search alive.\nSelf-learning — every generation, the current best graph gets a focused local polish, a mini-search around it to squeeze out extra quality.\n\nOne catch: Bayesian networks can’t contain cycles, and crossover or mutation can accidentally create one. So whenever that happens, a repair step breaks the cycle by removing or reversing an offending edge."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#did-it-work",
+    "href": "posts/magabn-explained/index.html#did-it-work",
+    "title": "My Paper Explained: MAGABN",
+    "section": "Did it work?",
+    "text": "Did it work?\nI tested MAGABN against three well-known methods — a classic genetic algorithm, a particle-swarm approach (BNCPSO), and hill-climbing with tabu search — on three standard benchmark networks (ASIA, CHILD, INSURANCE), across different amounts of data.\nThe short version: MAGABN was both more accurate and more consistent. It had the best average structure-recovery score in 6 of 8 settings, and the most stable results (lowest variance) in 6 of 8. A statistical test (ANOVA + Tukey) confirmed the edge over the other methods was real, not luck. It held up especially well on the larger networks, which are exactly the cases where structure learning usually struggles."
+  },
+  {
+    "objectID": "posts/magabn-explained/index.html#the-takeaway",
+    "href": "posts/magabn-explained/index.html#the-takeaway",
+    "title": "My Paper Explained: MAGABN",
+    "section": "The takeaway",
+    "text": "The takeaway\nA metaheuristic originally built for continuous numerical optimization can be adapted into a reliable learner for a hard combinatorial problem.\nIf you want the full details, tables, and proofs of significance, the paper is here."
   },
   {
     "objectID": "research.html",
@@ -60,7 +109,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "No matching items"
+    "text": "My Paper Explained: MAGABN\n\n\nHow a grid of cooperating agents learns the structure of a Bayesian network.\n\n\n\n\n\nSep 18, 2026\n\n\nJoão Pedro Campos\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects.html",

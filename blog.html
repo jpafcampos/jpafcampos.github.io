@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -214,7 +214,31 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TXklMjBQYXBlciUyMEV4cGxhaW5lZCUyQ0JheWVzaWFuJTIwbmV0d29ya3MlMkNNZXRhaGV1cmlzdGljcw==" data-listing-date-sort="1789700400000" data-listing-file-modified-sort="1789751256712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
+<div class="thumbnail"><a href="./posts/magabn-explained/index.html" class="no-external">
 
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/magabn-explained/index.html" class="no-external">My Paper Explained: MAGABN</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/magabn-explained/index.html" class="no-external">
+<p>How a grid of cooperating agents learns the structure of a Bayesian network.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/magabn-explained/index.html" class="no-external">
+<div class="listing-date">
+Sep 18, 2026
+</div>
+<div class="listing-author">
+João Pedro Campos
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
