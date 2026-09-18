@@ -1,15 +1,53 @@
 ---
 title: "João Pedro Campos"
-subtitle: "PhD researcher · Data Scientist & Machine Learning Engineer"
+subtitle: "PhD Researcher · Machine Learning Engineer"
 about:
   template: trestles
+  image: profile.jpg
+  image-shape: round
   links:
     - icon: github
+      text: GitHub
       href: https://github.com/jpafcampos
     - icon: linkedin
-      href: https://linkedin.com/in/joao-pedro-araujo-ferreira-campos
+      text: LinkedIn
+      href: https://linkedin.com/in/YOUR-PROFILE
+    - icon: mortarboard
+      text: Scholar
+      href: https://scholar.google.com/citations?user=8YCgpS0AAAAJ
     - icon: envelope
-      href: mailto:seu@email.com
+      text: Email
+      href: mailto:you@email.com
+listing:
+  - id: recent-posts
+    contents: posts
+    type: default
+    max-items: 3
+    sort: "date desc"
+    fields: [date, title, description]
 ---
 
-I'm a PhD researcher at UFMG, Brazil, working on probabilistic graphical models and explainable decision making.
+I'm a PhD researcher at UFMG, affiliated with the University of Bristol,
+working at the intersection of probabilistic graphical models, Bayesian
+network inference, and explainable AI. Strong background in systems engineering,
+machine learning, deep learning, and optimization, including non-linear and linear programming.
+ On the applied side, I build end-to-end machine learning systems.
+
+My central research interest is making **interpretable** decisions with probabilistic models.
+.
+
+## Highlights
+
+- 📄 **Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning** — *Knowledge-Based Systems*, 2025. [Read](research.qmd)
+- 🛠️ **End-to-end MLOps pipeline (Olist)** — a complete ML system in production. [View project](projects.qmd)
+
+## News
+
+- **Sep 2026** — New version of the site is live.
+- **2025** — Two papers accepted at CBIC 2025.
+- **Feb 2025** — Paper published in *Knowledge-Based Systems*.
+
+## Recent posts
+
+:::{#recent-posts}
+:::
