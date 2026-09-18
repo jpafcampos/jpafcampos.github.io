@@ -1,0 +1,13 @@
+---
+title: "Pesquisa"
+---
+
+## Interesses
+
+Modelos gráficos probabilísticos, inferência em redes bayesianas e
+explicabilidade.
+
+## Publicações
+
+- **Título do paper.** Autores. *Venue*, Ano. [PDF](#) · [DOI](#)
+- **Outro paper.** Autores. *Venue*, Ano. [PDF](#)

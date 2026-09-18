@@ -1,0 +1,8 @@
+---
+title: "Projetos"
+listing:
+  contents: projects
+  type: grid
+  fields: [image, title, description, date]
+  sort: "date desc"
+---

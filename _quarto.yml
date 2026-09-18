@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "João Pedro Campos - MSc"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Início
+      - href: research.qmd
+        text: Pesquisa
+      - href: projects.qmd
+        text: Projetos
+      - href: blog.qmd
+        text: Blog
+    tools:
+      - icon: github
+        href: https://github.com/jpafcampos
+      - icon: linkedin
+        href: https://linkedin.com/in/joao-pedro-araujo-ferreira-campos
+      - icon: envelope
+        href: mailto:seu@email.com
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
