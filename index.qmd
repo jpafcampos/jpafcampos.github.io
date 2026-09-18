@@ -1,5 +1,5 @@
 ---
-title: "João Campos"
+title: "João Pedro Campos"
 subtitle: "PhD researcher · Data Scientist & Machine Learning Engineer"
 about:
   template: trestles
@@ -12,5 +12,4 @@ about:
       href: mailto:seu@email.com
 ---
 
-Sou pesquisador de doutorado na UFMG,
-trabalhando com modelos probabilísticos e explicabilidade.
+I'm a PhD researcher at UFMG, Brazil, working on probabilistic graphical models and explainable decision making.

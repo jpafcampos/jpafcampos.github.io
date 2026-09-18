@@ -2,12 +2,21 @@
 title: "Pesquisa"
 ---
 
-## Interesses
+## Interests
 
-Modelos gráficos probabilísticos, inferência em redes bayesianas e
-explicabilidade.
+Probabilistic graphical models, explainable AI, structure learning of Bayesian networks, 
+natural language processing, causal Machine Learning.
+Also interested in transdisciplinary studies involving AI, ethics, psychoanalysis and impacts of AI and its relations to human subjectivity.
+
+## Publications
 
 ## Publicações
 
-- **Título do paper.** Autores. *Venue*, Ano. [PDF](#) · [DOI](#)
-- **Outro paper.** Autores. *Venue*, Ano. [PDF](#)
+
+- **J. P. A. F. Campos**, I. G. Machado, M. Bessani. "Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning." *Knowledge-Based Systems*, 2025. [DOI](https://doi.org/10.1016/j.knosys.2025.113025)
+- J. M. De Martino, I. R. Silva, J. G. T. Marques, A. C. Martins, E. T. Poeta, D. S. Christinele, **J. P. A. F. Campos**. "Neural Machine Translation from Text to Sign Language." *Universal Access in the Information Society*, Springer, 2023.
+- B. Sollar Godoi, **J. P. Campos**, L. Raimundo, M. Mendonça, G. Silveira, M. Gregori, G. Iannini. "Language without Body, Meaning without World: The Uncanny in the Language of Artificial Intelligence." *International Forum of Psychoanalysis*, 35(1):18–30, Routledge, 2026.
+- M. C. O. D. Ruas, **J. P. A. F. Campos**, M. Bastos Soares, M. Bessani. "Graph-based Comparison and Analysis of Metaheuristics." *Congresso Brasileiro de Inteligência Computacional (CBIC)*, 2025.
+- G. A. Pires, **J. P. A. F. Campos**, L. Marques Laboissiere, M. Bessani. "Multi-Objective Optimization for Gender Bias Mitigation in Word Embeddings Applied to Hate Speech Detection." *Congresso Brasileiro de Inteligência Computacional (CBIC)*, 2025.
+- **J. P. Campos**, N. Resende, R. de Souza, G. Iannini. "Psychoanalytic Studies in the Digital Humanities: Employing Topic Modeling with an LLM to Decode Dreams During the Brazilian Pandemic." *Proc. 16th International Conference on Computational Processing of Portuguese (PROPOR)*, 2024.
+- **J. P. Campos**, L. de Souza Batista, M. Bessani. "A Bayesian Bi-objective Approach for Sensor Allocation in Complex Systems." *Proc. XXV Congresso Brasileiro de Automática (CBA)*, 2024.
