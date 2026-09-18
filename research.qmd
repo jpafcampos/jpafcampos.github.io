@@ -1,5 +1,5 @@
 ---
-title: "Pesquisa"
+title: "Research"
 ---
 
 ## Interests
@@ -9,8 +9,6 @@ natural language processing, causal Machine Learning.
 Also interested in transdisciplinary studies involving AI, ethics, psychoanalysis and impacts of AI and its relations to human subjectivity.
 
 ## Publications
-
-## Publicações
 
 
 - **J. P. A. F. Campos**, I. G. Machado, M. Bessani. "Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning." *Knowledge-Based Systems*, 2025. [DOI](https://doi.org/10.1016/j.knosys.2025.113025)

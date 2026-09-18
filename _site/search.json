@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "João Campos",
+    "title": "João Pedro Campos",
     "section": "",
-    "text": "Sou pesquisador de doutorado na UFMG, trabalhando com modelos probabilísticos e explicabilidade."
+    "text": "I’m a PhD researcher at UFMG, Brazil, working on probabilistic graphical models and explainable decision making."
   },
   {
     "objectID": "about.html",
@@ -18,21 +18,28 @@
     "href": "research.html",
     "title": "Pesquisa",
     "section": "",
-    "text": "Modelos gráficos probabilísticos, inferência em redes bayesianas e explicabilidade."
+    "text": "Probabilistic graphical models, explainable AI, structure learning of Bayesian networks, natural language processing, causal Machine Learning. Also interested in transdisciplinary studies involving AI, ethics, psychoanalysis and impacts of AI and its relations to human subjectivity."
   },
   {
-    "objectID": "research.html#interesses",
-    "href": "research.html#interesses",
+    "objectID": "research.html#interests",
+    "href": "research.html#interests",
     "title": "Pesquisa",
     "section": "",
-    "text": "Modelos gráficos probabilísticos, inferência em redes bayesianas e explicabilidade."
+    "text": "Probabilistic graphical models, explainable AI, structure learning of Bayesian networks, natural language processing, causal Machine Learning. Also interested in transdisciplinary studies involving AI, ethics, psychoanalysis and impacts of AI and its relations to human subjectivity."
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Pesquisa",
+    "section": "Publications",
+    "text": "Publications"
   },
   {
     "objectID": "research.html#publicações",
     "href": "research.html#publicações",
     "title": "Pesquisa",
     "section": "Publicações",
-    "text": "Publicações\n\nTítulo do paper. Autores. Venue, Ano. PDF · DOI\nOutro paper. Autores. Venue, Ano. PDF"
+    "text": "Publicações\n\nJ. P. A. F. Campos, I. G. Machado, M. Bessani. “Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning.” Knowledge-Based Systems, 2025. DOI\nJ. M. De Martino, I. R. Silva, J. G. T. Marques, A. C. Martins, E. T. Poeta, D. S. Christinele, J. P. A. F. Campos. “Neural Machine Translation from Text to Sign Language.” Universal Access in the Information Society, Springer, 2023.\nB. Sollar Godoi, J. P. Campos, L. Raimundo, M. Mendonça, G. Silveira, M. Gregori, G. Iannini. “Language without Body, Meaning without World: The Uncanny in the Language of Artificial Intelligence.” International Forum of Psychoanalysis, 35(1):18–30, Routledge, 2026.\nM. C. O. D. Ruas, J. P. A. F. Campos, M. Bastos Soares, M. Bessani. “Graph-based Comparison and Analysis of Metaheuristics.” Congresso Brasileiro de Inteligência Computacional (CBIC), 2025.\nG. A. Pires, J. P. A. F. Campos, L. Marques Laboissiere, M. Bessani. “Multi-Objective Optimization for Gender Bias Mitigation in Word Embeddings Applied to Hate Speech Detection.” Congresso Brasileiro de Inteligência Computacional (CBIC), 2025.\nJ. P. Campos, N. Resende, R. de Souza, G. Iannini. “Psychoanalytic Studies in the Digital Humanities: Employing Topic Modeling with an LLM to Decode Dreams During the Brazilian Pandemic.” Proc. 16th International Conference on Computational Processing of Portuguese (PROPOR), 2024.\nJ. P. Campos, L. de Souza Batista, M. Bessani. “A Bayesian Bi-objective Approach for Sensor Allocation in Complex Systems.” Proc. XXV Congresso Brasileiro de Automática (CBA), 2024."
   },
   {
     "objectID": "blog.html",

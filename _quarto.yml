@@ -7,11 +7,11 @@ website:
   navbar:
     right:
       - href: index.qmd
-        text: Início
+        text: Home
       - href: research.qmd
-        text: Pesquisa
+        text: Research
       - href: projects.qmd
-        text: Projetos
+        text: Projects
       - href: blog.qmd
         text: Blog
     tools:
