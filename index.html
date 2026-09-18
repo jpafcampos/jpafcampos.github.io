@@ -36,6 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,7 +74,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -128,10 +188,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <div class="quarto-about-trestles">
   <div class="about-entity">
+    <img src="profile.jpg" class="about-image
+  round " style="height: 20em; width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">João Pedro Campos</h1>
-<p class="subtitle lead">PhD researcher · Data Scientist &amp; Machine Learning Engineer</p>
+<p class="subtitle lead">PhD Researcher · Machine Learning Engineer</p>
 </div>
 <div class="quarto-title-meta">
   </div>
@@ -139,22 +201,50 @@ ul.task-list li input[type="checkbox"] {
     <div class="about-links">
   <a href="https://github.com/jpafcampos" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
+     <span class="about-link-text">GitHub</span>
   </a>
-  <a href="https://linkedin.com/in/joao-pedro-araujo-ferreira-campos" class="about-link" rel="" target="">
+  <a href="https://linkedin.com/in/YOUR-PROFILE" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
-     <span class="about-link-text"></span>
+     <span class="about-link-text">LinkedIn</span>
   </a>
-  <a href="mailto:seu@email.com" class="about-link" rel="" target="">
+  <a href="https://scholar.google.com/citations?user=8YCgpS0AAAAJ" class="about-link" rel="" target="">
+    <i class="bi bi-mortarboard"></i>
+     <span class="about-link-text">Scholar</span>
+  </a>
+  <a href="mailto:you@email.com" class="about-link" rel="" target="">
     <i class="bi bi-envelope"></i>
-     <span class="about-link-text"></span>
+     <span class="about-link-text">Email</span>
   </a>
 </div>
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>I’m a PhD researcher at UFMG, Brazil, working on probabilistic graphical models and explainable decision making.</p>
+<p>I’m a PhD researcher at UFMG, affiliated with the University of Bristol, working at the intersection of probabilistic graphical models, Bayesian network inference, and explainable AI. Strong background in systems engineering, machine learning, deep learning, and optimization, including non-linear and linear programming. On the applied side, I build end-to-end machine learning systems.</p>
+<p>My central research interest is making <strong>interpretable</strong> decisions with probabilistic models. .</p>
+<section id="highlights" class="level2">
+<h2 data-anchor-id="highlights">Highlights</h2>
+<ul>
+<li>📄 <strong>Multi-Agent Genetic Algorithm for Bayesian Networks Structural Learning</strong> — <em>Knowledge-Based Systems</em>, 2025. <a href="./research.html">Read</a></li>
+<li>🛠️ <strong>End-to-end MLOps pipeline (Olist)</strong> — a complete ML system in production. <a href="./projects.html">View project</a></li>
+</ul>
+</section>
+<section id="news" class="level2">
+<h2 data-anchor-id="news">News</h2>
+<ul>
+<li><strong>Sep 2026</strong> — New version of the site is live.</li>
+<li><strong>2025</strong> — Two papers accepted at CBIC 2025.</li>
+<li><strong>Feb 2025</strong> — Paper published in <em>Knowledge-Based Systems</em>.</li>
+</ul>
+</section>
+<section id="recent-posts" class="level2">
+<h2 data-anchor-id="recent-posts">Recent posts</h2>
+<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
+</section>
 </main></div>
 </div>
  <!-- /main -->
